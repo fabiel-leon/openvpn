@@ -1,0 +1,9 @@
+---
+# File: main.yml
+# Type: handler
+# Part: OpenVPN
+
+- include: init.yml
+  when: not docker
+- include: supervisor.yml
+  when: docker
